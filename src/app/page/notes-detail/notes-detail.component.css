@@ -1,0 +1,23 @@
+.form-container{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+input.ng-invalid.ng-touched{
+    border-color: red;
+}
+
+/* need to add required on html to show background */
+textarea.ng-invalid{
+    border-color: red;
+}
+
+#titleInput{
+    width: 400px;
+}
+
+#textInput{
+    width: 400px;
+    height: 300px;
+}

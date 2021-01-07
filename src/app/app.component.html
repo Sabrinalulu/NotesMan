@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger rounded">
+    <button class="navbar-toggler" 
+    type="button" 
+    data-toggle="collapse" 
+    data-target="#navbarexample"
+    aria-controls="navbarexample">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarexample">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link mb-2" style="font-size:25px" routerLink="/">Home</a>
+        </li>
+
+        <li class ="nav-item">
+          <a class="nav-link mb-2" style="font-size:25px" routerLink="/page/storage" [class.disabled]="!isLoggedIn">Notes</a>
+        </li>
+  
+        <li class ="nav-item">
+          <a class="nav-link mb-2" style="font-size:25px" routerLink="/login" (click)="login()" [class.disabled]="isLoggedIn">Login</a>
+        </li>
+  
+        <li class ="nav-item">
+          <a class="nav-link mb-2" style="font-size:25px" routerLink="/logout" (click)="logout()" [class.disabled]="!isLoggedIn">Logout</a>
+        </li>
+
+        <li class ="nav-item">
+          <a class="nav-link mb-2" style="font-size:25px" routerLink="/config-info" [class.disabled]="!isLoggedIn">Config & userInfo</a>
+        </li>
+          
+      </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- <div id='footer' class="card text-center text-white bg-danger mb-3">
+    <div class="card-footer mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Trainee Project</h5>
+            <p class="card-text">NotesMan</p>
+            <a href="#" class="btn btn-primary">Labshare</a>
+        </div>
+    </div>
+</div> -->

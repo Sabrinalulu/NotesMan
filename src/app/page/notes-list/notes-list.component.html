@@ -1,0 +1,15 @@
+<div class='main-container'>
+
+    <!-- let i=index [routerLink]="['../notes-detail', note.noteID]" -->
+    <div class='notes-list'>
+        <app-note-card 
+        *ngFor="let note of notes;" 
+        [link]="['../notes-detail', note.id]"
+        (delete)="deleteNote(note.id)"
+        [title]="note.title" 
+        [body]="note.body"></app-note-card>
+    </div>
+
+    <button class="btn btn-primary" id="forAdd" routerLink="../notes-detail">+ Add</button>
+
+</div>
